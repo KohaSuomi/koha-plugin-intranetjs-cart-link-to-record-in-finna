@@ -9,7 +9,7 @@
 
 <div id="breadcrumbs"><a href="/cgi-bin/koha/mainpage.pl">Home</a> &rsaquo; <a href="/cgi-bin/koha/plugins/plugins-home.pl">Plugins</a> &rsaquo; IntranetUserJS: Add cart link to record in Finna &rsaquo; Configuration</div>
 
-<div id="doc3">
+<div id="doc3" style="margin-left: 15px">
 
     <!-- Notice our form here has no 'action', this is good, it means that our forms will always get passed back to 'plugins/run.pl'. You could hard code it instead if you prefer -->
     <form method="get">
@@ -19,7 +19,7 @@
 
         <p>
 
-        <label for="config_param_a">Käytettävän raportin ID: </label>
+        <label for="config_param_a">Finna-linkin alkuosa/Finnan URL (esim. https://siilinjarvenkirjasto.finna.fi/Record/siilinjarvi): </label>
         <input type="text" name="config_param_a" value="[% config_param_a %]" />
 
         <p>
@@ -28,8 +28,6 @@
 
         <input type="submit" value="Save configuration" />
     </form>
-
-    <hr/>
 
     <p>
         <h5>Upgrade status</h5>
