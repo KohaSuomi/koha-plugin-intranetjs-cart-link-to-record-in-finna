@@ -15,14 +15,14 @@ our $VERSION = "1.0.0";
 
 ## Here is our metadata, some keys are required, some are optional
 our $metadata = {
-    name            => "IntranetUserJS: Cart - Add link to record in Finna",
+    name            => "IntranetUserJS: Add links to record in Finna",
     author          => 'Lari Strand',
     date_authored   => '2024-06-04',
     date_updated    => '2024-06-04',
     minimum_version => '23.11',
     maximum_version => '',
     version         => $VERSION,
-    description     => "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart). Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä.",
+    description     => "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart) ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä.",
 };
 
 ## This is the minimum code required for a plugin's 'new' method
