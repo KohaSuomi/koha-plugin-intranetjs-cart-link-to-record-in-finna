@@ -22,7 +22,7 @@ our $metadata = {
     minimum_version => '23.11',
     maximum_version => '',
     version         => $VERSION,
-    description     => "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart) ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä.",
+    description     => "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart) ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)",
 };
 
 ## This is the minimum code required for a plugin's 'new' method
