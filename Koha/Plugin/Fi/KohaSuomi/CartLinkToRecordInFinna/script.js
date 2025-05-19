@@ -54,4 +54,36 @@ $(document).ready(function () {
   }
 });
 
+$(document).ready(function () {
+  if (window.location.pathname == '/cgi-bin/koha/catalogue/search.pl') {
+    var linktext = 'Avaa Finnassa';
+    if ($('#changelanguage .currentlanguage').text() == 'English') {
+      linktext = 'Open in Finna';
+    } else if ($('#changelanguage .currentlanguage').text() == 'Svenska') {
+      linktext = 'Öppna i Finna';
+    }
+
+    var search_results = document.querySelectorAll("[id^='row']");
+
+    search_results.forEach(function (index) {
+
+      var id = $(index).attr('id');
+      var biblionumber = parseInt(id.replace('row', ''));
+
+      var resultsSummary = index.childNodes[5];
+
+      if (resultsSummary) {
+        var fifthChild = resultsSummary.childNodes[4];
+        var span = document.createElement('span');
+        span.className = 'results_summary finnaurl';
+        var span2 = document.createElement('span');
+        span2.className = 'label';
+        span2.innerHTML = '<a href="' + finnaurl + '.' + biblionumber + '" class="finnalink" target="_blank"><i class="fa fa-external-link"></i> ' + linktext + '</a>';
+        span.appendChild(span2);
+        fifthChild.parentNode.insertBefore(span, fifthChild.nextSibling);
+      }
+    });
+  }
+});
+
 /// LOPPU ///
