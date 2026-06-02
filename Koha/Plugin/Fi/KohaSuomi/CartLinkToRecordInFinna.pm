@@ -9,6 +9,7 @@ use base qw(Koha::Plugins::Base);
 use C4::Context;
 use utf8;
 use File::Slurp;
+use C4::Languages;
 
 ## Here we set our plugin version
 our $VERSION = "1.0.0";
@@ -25,6 +26,25 @@ our $metadata = {
     description     => "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart), hakutuloksiin ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)",
 };
 
+sub get_localized_metadata {
+    my ($self) = @_;
+    my $lang = C4::Languages::getlanguage() || 'en';
+    my ($name, $description);
+
+    if ($lang eq 'sv-SE') {
+        $name = "IntranetUserJS: Lägg till länkar till post i Finna";
+        $description = "Lägger till länkar till post i Finna i varukorgen (cart), sökresultaten och objektvyen. Konfigurerabart. Lägger till en anpassad URL-prefix i konfigurationen. (Lokala databaser)";
+    
+    } elsif ($lang eq 'fi-FI' ) {
+        $name = "IntranetUserJS: Lisää linkit tietueisiin Finna-verkkokirjastossa";
+        $description = "Lisää linkit tietueisiin Finna-verkkokirjastossa ostoskoriin (cart), hakutuloksiin ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)";
+    } else {
+        $name = "IntranetUserJS: Add links to record in Finna";
+        $description = "Adds links to records in Finna to the shopping cart (cart), search results, and record view. Configurable. Adds a custom URL prefix in the configuration. (Local databases)";
+    }
+    return ($name, $description);
+}
+
 ## This is the minimum code required for a plugin's 'new' method
 ## More can be added, but none should be removed
 sub new {
@@ -38,6 +58,10 @@ sub new {
     ## This runs some additional magic and checking
     ## and returns our actual
     my $self = $class->SUPER::new($args);
+
+    my ($name, $description) = $self->get_localized_metadata();
+    $self->{'metadata'}->{'name'} = $name;
+    $self->{'metadata'}->{'description'} = $description;
 
     return $self;
 }

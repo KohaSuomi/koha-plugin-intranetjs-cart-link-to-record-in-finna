@@ -20,5 +20,5 @@ mypath="$(dirname $(readlink -f $0))"
 ln -svfn $mypath/Koha/Plugin/Fi/KohaSuomi/* $kohaplugindir/Koha/Plugin/Fi/KohaSuomi/
 
 # Install plugins as koha
-sudo -ukoha $KOHA_PATH/misc/devel/install_plugins.pl
+sudo -uolli $KOHA_PATH/misc/devel/install_plugins.pl
 
