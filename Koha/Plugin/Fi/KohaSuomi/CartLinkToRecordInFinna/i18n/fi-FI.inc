@@ -1,16 +1,16 @@
 [%
     T = {
-        title = "IntranetUserJS: Lisää linkit tietueeseen Finnassa",
-        description = "Finna-verkkokirjastolinkkien lisääminen ostoskoriin (cart), hakutuloksiin ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)",
+        title = "IntranetUserJS: Lisää linkit kuvailutietueisiin Finna-verkkokirjastoon",
+        description = "Lisää linkit kuvailutietueisiin Finna-verkkokirjastoon Korissa, hakutuloksissa ja tietuenäytölle. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)",
         home = "Etusivu",
         plugins = "Liitännäiset",
-        view = "Näytä JS-työkalu",
-        configuration = "Määritys",
+        view = "Näytä JS-Liitännäinen",
+        configuration = "Määritykset",
         back = "Takaisin",
-        save = "Tallenna määritys",
+        save = "Tallenna määritykset",
         config_label = "Finna-linkin alkuosa/Finnan URL (esim. https://siilinjarvenkirjasto.finna.fi/Record/siilinjarvi):",
         upgrade_status = "Päivityksen tila",
-        last_upgraded = "Liitännäinen päivitettiin viimeksi tähän järjestelmään",
+        last_upgraded = "Liitännäinen päivitettiin viimeksi",
         never_upgraded = "Liitännäistä ei ole koskaan päivitetty."
     }
 %]

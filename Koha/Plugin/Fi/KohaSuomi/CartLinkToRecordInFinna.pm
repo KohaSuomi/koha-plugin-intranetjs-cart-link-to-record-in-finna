@@ -32,15 +32,15 @@ sub get_localized_metadata {
     my ($name, $description);
 
     if ($lang eq 'sv-SE') {
-        $name = "IntranetUserJS: Lägg till länkar till post i Finna";
-        $description = "Lägger till länkar till post i Finna i varukorgen (cart), sökresultaten och objektvyen. Konfigurerabart. Lägger till en anpassad URL-prefix i konfigurationen. (Lokala databaser)";
+        $name = "IntranetUserJS: Lägger till länkar till bibliografiska poster i Finna";
+        $description = "Lägger till länkar till bibliografiska poster i Finna i Minneslistan, sökresultaten och Normal-vyn. Lägg till ett anpassat URL-prefix i konfigurationen. (Lokala databaser)";
     
     } elsif ($lang eq 'fi-FI' ) {
-        $name = "IntranetUserJS: Lisää linkit tietueisiin Finna-verkkokirjastossa";
-        $description = "Lisää linkit tietueisiin Finna-verkkokirjastossa ostoskoriin (cart), hakutuloksiin ja tietuenäytölle. Konfiguroitava. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)";
+        $name = "IntranetUserJS: Lisää linkit kuvailutietueisiin Finna-verkkokirjastoon";
+        $description = "Lisää linkit kuvailutietueisiin Finna-verkkokirjastoon Korissa, hakutuloksissa ja tietuenäytölle. Lisää kimppakohtainen URL-alkuosa määrittelyssä. (Paikalliskannat)";
     } else {
-        $name = "IntranetUserJS: Add links to record in Finna";
-        $description = "Adds links to records in Finna to the shopping cart (cart), search results, and record view. Configurable. Adds a custom URL prefix in the configuration. (Local databases)";
+        $name = "IntranetUserJS: Add links to bibliographic records in Finna";
+        $description = "Adds links to bibliographic records in Finna to the Cart, search results, and Normal view. Add a custom URL prefix in the configuration. (Local databases)";
     }
     return ($name, $description);
 }
