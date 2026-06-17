@@ -9,8 +9,8 @@
         back = "Tillbaka",
         save = "Spara inställningar",
         config_label = "Finna-länkens början / Finna-URL (t.ex. https://siilinjarvenkirjasto.finna.fi/Record/siilinjarvi):",
-        upgrade_status = "Uppgraderingsstatus",
-        last_upgraded = "Plugin uppgraderades senast",
-        never_upgraded = "Plugin har aldrig uppgraderats."
+        upgrade_status = "Uppdateringsstatus",
+        last_upgraded = "Plugin uppdaterades senast",
+        never_upgraded = "Plugin har aldrig uppdaterats."
     }
 %]
