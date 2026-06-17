@@ -1,6 +1,6 @@
 [%
     T = {
-        title = "IntranetUserJS: Adds links to record in Finna",
+        title = "IntranetUserJS: Add links to bibliographic records in Finna",
         description = "Adds links to bibliographic records in Finna to the Cart, search results, and Normal view. Add a custom URL prefix in the configuration. (Local databases)",
         home = "Home",
         plugins = "Plugins",
